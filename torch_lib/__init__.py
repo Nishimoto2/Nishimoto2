@@ -76,7 +76,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             avg_train_loss = train_loss / count
             avg_train_acc = train_acc / count
         net.eval()
-          count = 0
+        count = 0
 
         for inputs, labels in test_loader:
             count += len(labels)
