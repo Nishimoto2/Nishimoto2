@@ -194,12 +194,3 @@ def show_images_labels(loader, classes, net, device):
         plt.imshow(img)
         ax.set_axis_off()
     plt.show()
-
-
-# PyTorch乱数固定用
-
-def torch_seed(seed=123):
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.use_deterministic_algorithms = True
