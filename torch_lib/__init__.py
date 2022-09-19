@@ -71,6 +71,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
             # 予測値算出
             predicted = torch.max(outputs, 1)[1]
+            print(predicted)
 
             # 正解件数算出
             train_acc += (predicted == labels).sum().item()
