@@ -71,7 +71,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
             # 予測値算出
             predicted = torch.max(outputs, 1)[1]
-            print(predicted)
+   
 
             # 正解件数算出
             train_acc += (predicted == labels).sum().item()
@@ -165,6 +165,7 @@ def show_images_labels(loader, classes, net, device):
 
       # 予測計算
       outputs = net(inputs)
+      
       predicted = torch.max(outputs,1)[1]
       #images = images.to('cpu')
 
