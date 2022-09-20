@@ -196,3 +196,4 @@ def show_images_labels(loader, classes, net, device):
         plt.imshow(img)
         ax.set_axis_off()
     plt.show()
+    
