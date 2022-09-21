@@ -154,7 +154,6 @@ def show_images_labels(loader, classes, net, device):
 
     # DataLoaderから最初の1セットを取得する
     for images, labels in loader:
-        print(labels[1])
         break
     # 表示数は50個とバッチサイズのうち小さい方
     n_size = min(len(images), 50)
