@@ -12,7 +12,6 @@ import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
 import torchvision.datasets as datasets
 from tqdm.notebook import tqdm
-import heapq
 
 # 損失関数値計算用
 def eval_loss(loader, device, net, criterion):
@@ -72,6 +71,9 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
             # 予測値算出
             predicted = torch.max(outputs, 1)[1]
+            
+            predicted_2=torch.topk(outputs, 5, 1)
+            
    
 
             # 正解件数算出
