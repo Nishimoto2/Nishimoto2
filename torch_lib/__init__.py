@@ -34,7 +34,7 @@ def eval_loss(loader, device, net, criterion):
   
 
 # 学習用関数
-def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history):
+def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, test1_loader, device, history):
 
     base_epochs = len(history)
   
@@ -102,6 +102,11 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
             #予測値算出
             predicted = torch.max(outputs, 1)[1]
+            
+            predicted_2=torch.topk(outputs, 5, 1)[1]
+            print(predicted_2[0][1])
+            
+            
 
             #正解件数算出
             val_acc += (predicted == labels).sum().item()
