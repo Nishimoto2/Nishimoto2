@@ -32,9 +32,8 @@ def eval_loss(loader, device, net, criterion):
 
     return loss
 
-def new_fit(img ,device ,net ,outputs ):
+def new_fit(img ,device ,net ,outputs ,outputs4):
   imgs = []
-  outputs4=[]
   imgs.append(img)
   imgs = imgs.to(device)
   outputs2 = net(imgs)
@@ -94,9 +93,9 @@ def new_fit(img ,device ,net ,outputs ):
   #27
   outputs4.append((outputs3[75]+outputs[76])/2)
   
-  predicted2 = torch.max(outputs4, 1)[1]
   
-  return predicted2
+  
+  return outputs4
 
 # 学習用関数
 def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history ,test_transform):
@@ -181,7 +180,10 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 for k in range(1,3):
                     if k!=rabels[i]:
                       list.append(k)
-                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(k,random.randrange(1,4))))
+                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  outputs4=[]
+                  
+                  predicted2 = torch.max(new_fit(img ,device ,net ,outputs ,outputs4), 1)[1]
                   
 
                   
