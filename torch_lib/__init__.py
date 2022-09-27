@@ -31,10 +31,75 @@ def eval_loss(loader, device, net, criterion):
     loss = criterion(outputs, labels)
 
     return loss
+
+def new_fit(img ,device ,net ,outputs ):
+  imgs = []
+  outputs4=[]
+  imgs.append(img)
+  imgs = imgs.to(device)
+  outputs2 = net(imgs)
+  outputs3=outputs[i]+outputs2
+  #1
+  outputs4.append((outputs3[0]+outputs[1])/2)
+  #2
+  outputs4.append((outputs3[2]+outputs[3]+outputs[4]+outputs[5])/4)
+  #3
+  outputs4.append((outputs3[6]+outputs[7])/2)
+  #4
+  outputs4.append((outputs3[8]+outputs[9])/2)
+  #5
+  outputs4.append((outputs3[10]+outputs[11]+outputs[12]+outputs[13]+outputs[14])/5)
+  #6
+  outputs4.append((outputs3[15]+outputs[16])/2)
+  #7
+  outputs4.append((outputs3[17]+outputs[18]+outputs[19]+outputs[20])/4)
+  #8
+  outputs4.append((outputs3[21]+outputs[22])/2)
+  #9
+  outputs4.append((outputs3[23]+outputs[24])/2)
+  #10
+  outputs4.append((outputs3[25]+outputs[26])/2)
+  #11
+  outputs4.append((outputs3[27]+outputs[28]+outputs[29]+outputs[30]+outputs[31])/5)
+  #12
+  outputs4.append((outputs3[32]+outputs[33])/2)
+  #13
+  outputs4.append((outputs3[34]+outputs[35])/2)
+  #14
+  outputs4.append((outputs3[36]+outputs[37])/2)
+  #15
+  outputs4.append((outputs3[38]+outputs[39])/2)
+  #16
+  outputs4.append((outputs3[40]+outputs[41]+outputs[42]+outputs[43])/4)
+  #17
+  outputs4.append((outputs3[44]+outputs[45])/2)
+  #18
+  outputs4.append((outputs3[46]+outputs[47])/2)
+  #19
+  outputs4.append((outputs3[48]+outputs[49]+outputs[50]+outputs[51])/4)
+  #20
+  outputs4.append((outputs3[52]+outputs[53])/2)
+  #21
+  outputs4.append((outputs3[54]+outputs[55])/2)
+  #22
+  outputs4.append((outputs3[56]+outputs[57]+outputs[58]+outputs[59]+outputs[60]+outputs[61])/6)
+  #23
+  outputs4.append((outputs3[62]+outputs[63])/2)
+  #24
+  outputs4.append((outputs3[64]+outputs[65]+outputs[66]+outputs[67])/4)
+  #25
+  outputs4.append((outputs3[68]+outputs[69])/2)
+  #26
+  outputs4.append((outputs3[70]+outputs[71]+outputs[73]+outputs[74])/4)
+  #27
+  outputs4.append((outputs3[75]+outputs[76])/2)
   
+  predicted2 = torch.max(outputs4, 1)[1]
+  
+  return predicted2
 
 # 学習用関数
-def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history):
+def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history ,test_transform):
 
     base_epochs = len(history)
   
@@ -103,13 +168,41 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #予測値算出
             predicted = torch.max(outputs, 1)[1]
             
-            predicted_2=torch.topk(outputs, 5, 1)[1]
-            print(predicted_2[0][1])
+            predicted_1=torch.topk(outputs,5,1)[0]
+            #predicted_2=torch.topk(outputs, 5, 1)[1]
             
+#original
+            for i in range(len(labels)):
+              list=[]
+              rabels2=[]
+              #1
+              if 1<=rabels[i]<=2:
+                rabels2.append(1)
+                for k in range(1,3):
+                    if k!=rabels[i]:
+                      list.append(k)
+                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(k,random.randrange(1,4))))
+                  
+
+                  
+              if 1<=rabels[i]<=2:
+                rabels2.append(1)
+                for k in range(1,3):
+                    if k!=rabels[i]:
+                      list.append(k)
+                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(k,random.randrange(1,4))))
+                  
+                  
+                  
+                  
+                  
+                  
+            
+#original
             
 
             #正解件数算出
-            val_acc += (predicted == labels).sum().item()
+            #val_acc += (predicted == labels).sum().item()
 
             # 損失と精度の計算
             avg_val_loss = val_loss / count
