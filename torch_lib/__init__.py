@@ -33,7 +33,7 @@ def eval_loss(loader, device, net, criterion):
     return loss
 
 # 学習用関数
-def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history ,test_transform):
+def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device, history ,train_transform):
 
     base_epochs = len(history)
   
