@@ -303,66 +303,65 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                     list.append(77-k)
                 img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
               
-              outputs4=[]
-              imgs = img.to(device)
-              outputs2 = net(imgs)
-              outputs3=outputs[i]+outputs2
+            outputs4=[]
+            outputs2 = net(imgs)
+            outputs3=outputs[i]+outputs2
               #1
-              outputs4.append((outputs3[0]+outputs3[1])/2)
+            outputs4.append((outputs3[0]+outputs3[1])/2)
   #2
-              outputs4.append((outputs3[2]+outputs3[3]+outputs3[4]+outputs3[5])/4)
+            outputs4.append((outputs3[2]+outputs3[3]+outputs3[4]+outputs3[5])/4)
   #3
-              outputs4.append((outputs3[6]+outputs3[7])/2)
+            outputs4.append((outputs3[6]+outputs3[7])/2)
   #4
-              outputs4.append((outputs3[8]+outputs3[9])/2)
+            outputs4.append((outputs3[8]+outputs3[9])/2)
   #5
-              outputs4.append((outputs3[10]+outputs3[11]+outputs3[12]+outputs3[13]+outputs3[14])/5)
+            outputs4.append((outputs3[10]+outputs3[11]+outputs3[12]+outputs3[13]+outputs3[14])/5)
   #6
-              outputs4.append((outputs3[15]+outputs3[16])/2)
+            outputs4.append((outputs3[15]+outputs3[16])/2)
   #7
-              outputs4.append((outputs3[17]+outputs3[18]+outputs3[19]+outputs3[20])/4)
+            outputs4.append((outputs3[17]+outputs3[18]+outputs3[19]+outputs3[20])/4)
       #8
-              outputs4.append((outputs3[21]+outputs3[22])/2)
+            outputs4.append((outputs3[21]+outputs3[22])/2)
   #9
-              outputs4.append((outputs3[23]+outputs3[24])/2)
-  #10
-              outputs4.append((outputs3[25]+outputs3[26])/2)
+            outputs4.append((outputs3[23]+outputs3[24])/2)
+  #10 
+            outputs4.append((outputs3[25]+outputs3[26])/2)
   #11
-              outputs4.append((outputs3[27]+outputs3[28]+outputs3[29]+outputs3[30]+outputs3[31])/5)
+            outputs4.append((outputs3[27]+outputs3[28]+outputs3[29]+outputs3[30]+outputs3[31])/5)
   #12
-              outputs4.append((outputs3[32]+outputs3[33])/2)
+            outputs4.append((outputs3[32]+outputs3[33])/2)
   #13
-              outputs4.append((outputs3[34]+outputs3[35])/2)
+            outputs4.append((outputs3[34]+outputs3[35])/2)
   #14
-              outputs4.append((outputs3[36]+outputs3[37])/2)
+            outputs4.append((outputs3[36]+outputs3[37])/2)
   #15
-              outputs4.append((outputs3[38]+outputs3[39])/2)
+            outputs4.append((outputs3[38]+outputs3[39])/2)
   #16
-              outputs4.append((outputs3[40]+outputs3[41]+outputs3[42]+outputs3[43])/4)
+            outputs4.append((outputs3[40]+outputs3[41]+outputs3[42]+outputs3[43])/4)
   #17
-              outputs4.append((outputs3[44]+outputs3[45])/2)
+            outputs4.append((outputs3[44]+outputs3[45])/2)
   #18
-              outputs4.append((outputs3[46]+outputs3[47])/2)
+            outputs4.append((outputs3[46]+outputs3[47])/2)
   #19
-              outputs4.append((outputs3[48]+outputs3[49]+outputs3[50]+outputs3[51])/4)
+            outputs4.append((outputs3[48]+outputs3[49]+outputs3[50]+outputs3[51])/4)
   #20
-              outputs4.append((outputs3[52]+outputs3[53])/2)
+            outputs4.append((outputs3[52]+outputs3[53])/2)
   #21
-              outputs4.append((outputs3[54]+outputs3[55])/2)
+            outputs4.append((outputs3[54]+outputs3[55])/2)
   #22
-              outputs4.append((outputs3[56]+outputs3[57]+outputs3[58]+outputs3[59]+outputs3[60]+outputs3[61])/6)
+            outputs4.append((outputs3[56]+outputs3[57]+outputs3[58]+outputs3[59]+outputs3[60]+outputs3[61])/6)
   #23
-              outputs4.append((outputs3[62]+outputs3[63])/2)
+            outputs4.append((outputs3[62]+outputs3[63])/2)
   #24
-              outputs4.append((outputs3[64]+outputs3[65]+outputs3[66]+outputs3[67])/4)
+            outputs4.append((outputs3[64]+outputs3[65]+outputs3[66]+outputs3[67])/4)
   #25
-              outputs4.append((outputs3[68]+outputs3[69])/2)
+            outputs4.append((outputs3[68]+outputs3[69])/2)
       #26
-              outputs4.append((outputs3[70]+outputs3[71]+outputs3[73]+outputs3[74])/4)
+            outputs4.append((outputs3[70]+outputs3[71]+outputs3[73]+outputs3[74])/4)
   #27
-              outputs4.append((outputs3[75]+outputs3[76])/2)
+            outputs4.append((outputs3[75]+outputs3[76])/2)
               
-              predicted2 = torch.max(outputs4, 1)[1]
+            predicted2 = torch.max(outputs4, 1)[1]
                   
                   
                   
