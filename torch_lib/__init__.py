@@ -105,11 +105,11 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             
             predicted_1=torch.topk(outputs,5,1)[0]
             #predicted_2=torch.topk(outputs, 5, 1)[1]
-            
+            rabels2=[]
 #original
             for i in range(len(labels)):
               list=[]
-              rabels2=[]
+              
               #1
               if 1<=rabels[i]<=2:
                 rabels2.append(1)
@@ -122,7 +122,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 rabels2.append(2)
                 for k in range(3,7):
                   if k!=rabels[i]:
-                  list.append(7-k)
+                    list.append(7-k)
                 img = train_transform(Image.open('kisoko/test/020{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 
               elif 7<=rabels[i]<=8:
