@@ -304,8 +304,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
               
               outputs4=[]
-              imgs = img.to(device)
-              outputs2 = net(imgs)
+              #imgs = img.to(device)
+              outputs2 = net(img)
               outputs3=outputs[i]+outputs2
               #1
               outputs4.append((outputs3[0]+outputs3[1])/2)
