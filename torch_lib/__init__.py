@@ -136,9 +136,10 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             # 予測値算出
             predicted = torch.max(outputs, 1)[1]
             
+            
+            
            # predicted_2=torch.topk(outputs, 5, 1)
             
-   
 
             # 正解件数算出
             train_acc += (predicted == labels).sum().item()
@@ -178,21 +179,256 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               if 1<=rabels[i]<=2:
                 rabels2.append(1)
                 for k in range(1,3):
-                    if k!=rabels[i]:
-                      list.append(k)
-                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
-                  outputs4=[]
+                  if k!=rabels[i]:
+                    list.append(k)
+                img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                   
-                  predicted2 = torch.max(new_fit(img ,device ,net ,outputs ,outputs4), 1)[1]
+              elif 3<=rabels[i]<=6:
+                rabels2.append(2)
+                for k in range(3,7):
+                  if k!=rabels[i]:
+                  list.append(7-k)
+                img = train_transform(Image.open('kisoko/test/020{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 7<=rabels[i]<=8:
+                rabels2.append(3)
+                for k in range(7,9):
+                  if k!=rabels[i]:
+                    list.append(9-k)
+                img = train_transform(Image.open('kisoko/test/030{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                   
-
+              elif 9<=rabels[i]<=10:
+                rabels2.append(4)
+                for k in range(9,11):
+                  if k!=rabels[i]:
+                    list.append(11-k)
+                img = train_transform(Image.open('kisoko/test/040{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                   
-              if 1<=rabels[i]<=2:
-                rabels2.append(1)
-                for k in range(1,3):
-                    if k!=rabels[i]:
-                      list.append(k)
-                  img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(k,random.randrange(1,4))))
+              elif 11<=rabels[i]<=15:
+                rabels2.append(5)
+                for k in range(11,16):
+                  if k!=rabels[i]:
+                    list.append(16-k)
+                img = train_transform(Image.open('kisoko/test/050{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 16<=rabels[i]<=17:
+                rabels2.append(6)
+                for k in range(16,18):
+                  if k!=rabels[i]:
+                    list.append(18-k)
+                img = train_transform(Image.open('kisoko/test/060{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+                
+              elif 18<=rabels[i]<=21:
+                rabels2.append(7)
+                for k in range(18,22):
+                  if k!=rabels[i]:
+                    list.append(22-k)
+                img = train_transform(Image.open('kisoko/test/070{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 22<=rabels[i]<=23:
+                rabels2.append(8)
+                for k in range(22,24):
+                  if k!=rabels[i]:
+                    list.append(24-k)
+                img = train_transform(Image.open('kisoko/test/080{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 24<=rabels[i]<=25:
+                rabels2.append(9)
+                for k in range(24,26):
+                  if k!=rabels[i]:
+                    list.append(26-k)
+                img = train_transform(Image.open('kisoko/test/090{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 26<=rabels[i]<=27:
+                rabels2.append(10)
+                for k in range(26,28):
+                  if k!=rabels[i]:
+                    list.append(28-k)
+                img = train_transform(Image.open('kisoko/test/100{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 28<=rabels[i]<=32:
+                rabels2.append(11)
+                for k in range(28,33):
+                  if k!=rabels[i]:
+                    list.append(33-k)
+                img = train_transform(Image.open('kisoko/test/110{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 33<=rabels[i]<=34:
+                rabels2.append(12)
+                for k in range(33,35):
+                  if k!=rabels[i]:
+                    list.append(35-k)
+                img = train_transform(Image.open('kisoko/test/120{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                    
+                    
+              elif 35<=rabels[i]<=36:
+                rabels2.append(13)
+                for k in range(35,37):
+                  if k!=rabels[i]:
+                    list.append(37-k)
+                img = train_transform(Image.open('kisoko/test/130{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 37<=rabels[i]<=38:
+                rabels2.append(14)
+                for k in range(37,39):
+                  if k!=rabels[i]:
+                    list.append(39-k)
+                img = train_transform(Image.open('kisoko/test/140{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 39<=rabels[i]<=40:
+                rabels2.append(15)
+                for k in range(39,41):
+                  if k!=rabels[i]:
+                    list.append(41-k)
+                img = train_transform(Image.open('kisoko/test/150{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 41<=rabels[i]<=44:
+                rabels2.append(16)
+                for k in range(41,45):
+                  if k!=rabels[i]:
+                    list.append(45-k)
+                img = train_transform(Image.open('kisoko/test/160{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 45<=rabels[i]<=46:
+                rabels2.append(17)
+                for k in range(45,47):
+                  if k!=rabels[i]:
+                    list.append(47-k)
+                img = train_transform(Image.open('kisoko/test/170{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 47<=rabels[i]<=48:
+                rabels2.append(18)
+                for k in range(47,49):
+                  if k!=rabels[i]:
+                    list.append(49-k)
+                img = train_transform(Image.open('kisoko/test/180{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+                
+              elif 49<=rabels[i]<=52:
+                rabels2.append(19)
+                for k in range(49,53):
+                  if k!=rabels[i]:
+                    list.append(53-k)
+                img = train_transform(Image.open('kisoko/test/190{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 53<=rabels[i]<=54:
+                rabels2.append(20)
+                for k in range(53,55):
+                  if k!=rabels[i]:
+                    list.append(55-k)
+                img = train_transform(Image.open('kisoko/test/200{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 55<=rabels[i]<=56:
+                rabels2.append(21)
+                for k in range(55,57):
+                  if k!=rabels[i]:
+                    list.append(57-k)
+                img = train_transform(Image.open('kisoko/test/210{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 57<=rabels[i]<=62:
+                rabels2.append(22)
+                for k in range(57,63):
+                  if k!=rabels[i]:
+                    list.append(63-k)
+                img = train_transform(Image.open('kisoko/test/220{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                  
+              elif 63<=rabels[i]<=64:
+                rabels2.append(23)
+                for k in range(63,65):
+                  if k!=rabels[i]:
+                    list.append(65-k)
+                img = train_transform(Image.open('kisoko/test/230{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                
+              elif 65<=rabels[i]<=68:
+                rabels2.append(24)
+                for k in range(65,69):
+                  if k!=rabels[i]:
+                    list.append(69-k)
+                img = train_transform(Image.open('kisoko/test/240{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                 
+              elif 69<=rabels[i]<=70:
+                rabels2.append(25)
+                for k in range(69,71):
+                  if k!=rabels[i]:
+                    list.append(71-k)
+                img = train_transform(Image.open('kisoko/test/250{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                 
+              elif 71<=rabels[i]<=74:
+                rabels2.append(26)
+                for k in range(71,75):
+                  if k!=rabels[i]:
+                    list.append(75-k)
+                img = train_transform(Image.open('kisoko/test/260{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                      
+              elif 75<=rabels[i]<=76:
+                rabels2.append(27)
+                for k in range(75,77):
+                  if k!=rabels[i]:
+                    list.append(77-k)
+                img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+              
+              outputs4=[]
+              imgs = img.to(device)
+              outputs2 = net(imgs)
+              outputs3=outputs[i]+outputs2
+              #1
+              outputs4.append((outputs3[0]+outputs3[1])/2)
+  #2
+              outputs4.append((outputs3[2]+outputs3[3]+outputs3[4]+outputs3[5])/4)
+  #3
+              outputs4.append((outputs3[6]+outputs3[7])/2)
+  #4
+              outputs4.append((outputs3[8]+outputs3[9])/2)
+  #5
+              outputs4.append((outputs3[10]+outputs3[11]+outputs3[12]+outputs3[13]+outputs3[14])/5)
+  #6
+              outputs4.append((outputs3[15]+outputs3[16])/2)
+  #7
+              outputs4.append((outputs3[17]+outputs3[18]+outputs3[19]+outputs3[20])/4)
+      #8
+              outputs4.append((outputs3[21]+outputs3[22])/2)
+  #9
+              outputs4.append((outputs3[23]+outputs3[24])/2)
+  #10
+              outputs4.append((outputs3[25]+outputs3[26])/2)
+  #11
+              outputs4.append((outputs3[27]+outputs3[28]+outputs3[29]+outputs3[30]+outputs3[31])/5)
+  #12
+              outputs4.append((outputs3[32]+outputs3[33])/2)
+  #13
+              outputs4.append((outputs3[34]+outputs3[35])/2)
+  #14
+              outputs4.append((outputs3[36]+outputs3[37])/2)
+  #15
+              outputs4.append((outputs3[38]+outputs3[39])/2)
+  #16
+              outputs4.append((outputs3[40]+outputs3[41]+outputs3[42]+outputs3[43])/4)
+  #17
+              outputs4.append((outputs3[44]+outputs3[45])/2)
+  #18
+              outputs4.append((outputs3[46]+outputs3[47])/2)
+  #19
+              outputs4.append((outputs3[48]+outputs3[49]+outputs3[50]+outputs3[51])/4)
+  #20
+              outputs4.append((outputs3[52]+outputs3[53])/2)
+  #21
+              outputs4.append((outputs3[54]+outputs3[55])/2)
+  #22
+              outputs4.append((outputs3[56]+outputs3[57]+outputs3[58]+outputs3[59]+outputs3[60]+outputs3[61])/6)
+  #23
+              outputs4.append((outputs3[62]+outputs3[63])/2)
+  #24
+              outputs4.append((outputs3[64]+outputs3[65]+outputs3[66]+outputs3[67])/4)
+  #25
+              outputs4.append((outputs3[68]+outputs3[69])/2)
+      #26
+              outputs4.append((outputs3[70]+outputs3[71]+outputs3[73]+outputs3[74])/4)
+  #27
+              outputs4.append((outputs3[75]+outputs3[76])/2)
+              
+              predicted2 = torch.max(outputs4, 1)[1]
+                  
                   
                   
                   
@@ -204,7 +440,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             
 
             #正解件数算出
-            #val_acc += (predicted == labels).sum().item()
+            #val_acc += (predicted2 == labels2).sum().item()
 
             # 損失と精度の計算
             avg_val_loss = val_loss / count
