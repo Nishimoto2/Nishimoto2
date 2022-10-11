@@ -73,7 +73,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             
             
             
-           # predicted_2=torch.topk(outputs, 5, 1)
+           #predicted_2=torch.topk(outputs, 5, 1)
             
 
             # 正解件数算出
@@ -109,6 +109,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             predicted2=[]
 
             for i in range(len(labels)):
+              outputs2=[]
               list=[]
               if 1<=labels[i]<=2:
                 labels2.append(1)
@@ -330,7 +331,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 
               
               outputs4=[]
-              
+              outputs2=net(img)
               outputs3=outputs[i]+outputs2
               #1
               outputs4.append((outputs3[0]+outputs3[1])/2)
