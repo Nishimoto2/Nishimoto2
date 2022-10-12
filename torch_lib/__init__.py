@@ -383,9 +383,9 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 img_batch = img[None]
                 outputs2 = net(img)
                 
-              
+              outputs=outputs.to('cpu').detach().numpy().copy()
               outputs4=[]
-              outputs3=outputs[i,:].to('cpu').detach().numpy().copy()+outputs2
+              outputs3=outputs[i,:]+outputs2
               #1
               outputs4.append((outputs3[0]+outputs3[1])/2)
   #2
