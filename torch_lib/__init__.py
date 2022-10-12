@@ -107,12 +107,12 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #predicted_2=torch.topk(outputs, 5, 1)[1]
             labels2=[]
             predicted2=[]
-            print(labels)
+            #print(labels)
 
             for i in range(len(labels)):
               outputs2=[]
               list=[]
-              if 1<=labels[i]<=2:
+              if 0<=labels[i]<=2:
                 labels2.append(1)
                 for k in range(1,3):
                   if k!=labels[i]:
@@ -385,7 +385,9 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 outputs2 = net(img)
               
               print(outputs2)
-              print(outputs[i,:])
+              print(outputs[i,:]
+              
+              
               
               
                   
