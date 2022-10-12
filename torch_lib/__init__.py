@@ -383,7 +383,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img)
-                
+              
+              print(outputs2)
               outputs=outputs.to('cpu').detach().numpy().copy()
               outputs4=[]
               outputs3=outputs[i,:]+outputs2
