@@ -387,6 +387,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 outputs2 = net(img_batch)
               
               print(outputs2)
+              print('///')
               print(outputs[i,:])
               
               
