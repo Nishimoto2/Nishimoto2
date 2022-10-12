@@ -107,6 +107,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #predicted_2=torch.topk(outputs, 5, 1)[1]
             labels2=[]
             predicted2=[]
+            print(labels)
 
             for i in range(len(labels)):
               outputs2=[]
