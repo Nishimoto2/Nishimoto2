@@ -112,7 +112,6 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #print(labels)
 
             for i in range(len(labels)):
-              outputs2=[]
               list=[]
               if 0<=labels[i]<=2:
                 labels2.append(1)
