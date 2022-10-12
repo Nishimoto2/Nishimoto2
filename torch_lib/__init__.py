@@ -13,6 +13,7 @@ from torch.utils.data import Dataset, DataLoader
 import torchvision.datasets as datasets
 from tqdm.notebook import tqdm
 from PIL import Image
+import random
 
 # 損失関数値計算用
 def eval_loss(loader, device, net, criterion):
