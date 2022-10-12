@@ -389,7 +389,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               print(outputs2)
               print('///')
               print(outputs[i,:])
-              
+              outputs3=outputs[i,0,:]
+              print(outputs3)
               
               
               
