@@ -113,275 +113,275 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
             for i in range(len(labels)):
               list=[]
-              if 0<=labels[i]<=2:
+              if 0<=labels[i]<=1:
                 labels2.append(1)
-                for k in range(1,3):
+                for k in range(0,2):
                   if k!=labels[i]:
-                    list.append(k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 img_batch = img_batch.to(device)
                 outputs2 = net(img_batch)
 
                   
-              elif 3<=labels[i]<=6:
+              elif 2<=labels[i]<=5:
                 labels2.append(2)
-                for k in range(3,7):
+                for k in range(2,6):
                   if k!=labels[i]:
-                    list.append(7-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/020{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 7<=labels[i]<=8:
+              elif 6<=labels[i]<=7:
                 labels2.append(3)
-                for k in range(7,9):
+                for k in range(6,8):
                   if k!=labels[i]:
-                    list.append(9-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/030{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 9<=labels[i]<=10:
+              elif 8<=labels[i]<=9:
                 rabels2.append(4)
-                for k in range(9,11):
+                for k in range(8,10):
                   if k!=labels[i]:
-                    list.append(11-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/040{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 11<=labels[i]<=15:
+              elif 10<=labels[i]<=14:
                 labels2.append(5)
-                for k in range(11,16):
+                for k in range(10,15):
                   if k!=labels[i]:
-                    list.append(16-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/050{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 16<=labels[i]<=17:
+              elif 15<=labels[i]<=16:
                 labels2.append(6)
-                for k in range(16,18):
+                for k in range(15,17):
                   if k!=labels[i]:
-                    list.append(18-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/060{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
                 
-              elif 18<=labels[i]<=21:
+              elif 17<=labels[i]<=20:
                 labels2.append(7)
-                for k in range(18,22):
+                for k in range(17,21):
                   if k!=labels[i]:
-                    list.append(22-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/070{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
                   
-              elif 22<=labels[i]<=23:
+              elif 21<=labels[i]<=22:
                 labels2.append(8)
-                for k in range(22,24):
+                for k in range(21,23):
                   if k!=labels[i]:
-                    list.append(24-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/080{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
    
 
                 
-              elif 24<=labels[i]<=25:
+              elif 23<=labels[i]<=24:
                 labels2.append(9)
-                for k in range(24,26):
+                for k in range(23,25):
                   if k!=labels[i]:
-                    list.append(26-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/090{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 26<=labels[i]<=27:
+              elif 25<=labels[i]<=26:
                 labels2.append(10)
-                for k in range(26,28):
+                for k in range(25,27):
                   if k!=labels[i]:
-                    list.append(28-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/100{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 28<=labels[i]<=32:
+              elif 27<=labels[i]<=31:
                 labels2.append(11)
-                for k in range(28,33):
+                for k in range(27,32):
                   if k!=labels[i]:
-                    list.append(33-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/110{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 33<=labels[i]<=34:
+              elif 32<=labels[i]<=33:
                 labels2.append(12)
-                for k in range(33,35):
+                for k in range(32,34):
                   if k!=labels[i]:
-                    list.append(35-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/120{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                     
                     
-              elif 35<=labels[i]<=36:
+              elif 34<=labels[i]<=35:
                 labels2.append(13)
-                for k in range(35,37):
+                for k in range(34,36):
                   if k!=labels[i]:
-                    list.append(37-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/130{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 37<=labels[i]<=38:
+              elif 36<=labels[i]<=37:
                 labels2.append(14)
-                for k in range(37,39):
+                for k in range(36,38):
                   if k!=labels[i]:
-                    list.append(39-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/140{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 39<=labels[i]<=40:
+              elif 38<=labels[i]<=39:
                 labels2.append(15)
-                for k in range(39,41):
+                for k in range(38,40):
                   if k!=labels[i]:
-                    list.append(41-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/150{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 41<=labels[i]<=44:
+              elif 40<=labels[i]<=43:
                 labels2.append(16)
-                for k in range(41,45):
+                for k in range(40,44):
                   if k!=labels[i]:
-                    list.append(45-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/160{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 45<=labels[i]<=46:
+              elif 44<=labels[i]<=45:
                 labels2.append(17)
-                for k in range(45,47):
+                for k in range(44,46):
                   if k!=labels[i]:
-                    list.append(47-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/170{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 47<=labels[i]<=48:
+              elif 46<=labels[i]<=47:
                 labels2.append(18)
-                for k in range(47,49):
+                for k in range(46,48):
                   if k!=labels[i]:
-                    list.append(49-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/180{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
                 
-              elif 49<=labels[i]<=52:
+              elif 48<=labels[i]<=51:
                 labels2.append(19)
-                for k in range(49,53):
+                for k in range(48,52):
                   if k!=labels[i]:
-                    list.append(53-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/190{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 53<=labels[i]<=54:
+              elif 52<=labels[i]<=53:
                 labels2.append(20)
-                for k in range(53,55):
+                for k in range(52,54):
                   if k!=labels[i]:
-                    list.append(55-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/200{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 55<=labels[i]<=56:
+              elif 54<=labels[i]<=55:
                 labels2.append(21)
-                for k in range(55,57):
+                for k in range(54,56):
                   if k!=labels[i]:
-                    list.append(57-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/210{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 57<=labels[i]<=62:
+              elif 56<=labels[i]<=61:
                 labels2.append(22)
-                for k in range(57,63):
+                for k in range(56,62):
                   if k!=labels[i]:
-                    list.append(63-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/220{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                   
-              elif 63<=labels[i]<=64:
+              elif 62<=labels[i]<=63:
                 labels2.append(23)
-                for k in range(63,65):
+                for k in range(62,64):
                   if k!=labels[i]:
-                    list.append(65-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/230{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                 
-              elif 65<=labels[i]<=68:
+              elif 64<=labels[i]<=67:
                 labels2.append(24)
-                for k in range(65,69):
+                for k in range(64,68):
                   if k!=labels[i]:
-                    list.append(69-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/240{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                  
-              elif 69<=labels[i]<=70:
+              elif 68<=labels[i]<=69:
                 labels2.append(25)
-                for k in range(69,71):
+                for k in range(68,70):
                   if k!=labels[i]:
-                    list.append(71-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/250{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                  
-              elif 71<=labels[i]<=74:
+              elif 70<=labels[i]<=73:
                 labels2.append(26)
-                for k in range(71,75):
+                for k in range(70,74):
                   if k!=labels[i]:
-                    list.append(75-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/260{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
 
                       
-              elif 75<=labels[i]<=76:
+              elif 74<=labels[i]<=75:
                 labels2.append(27)
-                for k in range(75,77):
+                for k in range(74,76):
                   if k!=labels[i]:
-                    list.append(77-k)
+                    list.append(k+1)
                 img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
                 img_batch = img[None]
                 outputs2 = net(img_batch)
