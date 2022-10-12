@@ -117,6 +117,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(k)
                 img = train_transform(Image.open('kisoko/test/010{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -126,6 +127,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(7-k)
                 img = train_transform(Image.open('kisoko/test/020{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -135,6 +137,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(9-k)
                 img = train_transform(Image.open('kisoko/test/030{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -144,6 +147,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(11-k)
                 img = train_transform(Image.open('kisoko/test/040{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -153,6 +157,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(16-k)
                 img = train_transform(Image.open('kisoko/test/050{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -162,6 +167,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(18-k)
                 img = train_transform(Image.open('kisoko/test/060{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -172,7 +178,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(22-k)
                 img = train_transform(Image.open('kisoko/test/070{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
-                
+                img_batch = img[None]
                 outputs2 = net(img)
                   
               elif 22<=labels[i]<=23:
@@ -181,6 +187,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(24-k)
                 img = train_transform(Image.open('kisoko/test/080{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
    
 
@@ -191,6 +198,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(26-k)
                 img = train_transform(Image.open('kisoko/test/090{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -200,6 +208,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(28-k)
                 img = train_transform(Image.open('kisoko/test/100{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -209,6 +218,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(33-k)
                 img = train_transform(Image.open('kisoko/test/110{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -218,6 +228,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(35-k)
                 img = train_transform(Image.open('kisoko/test/120{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                     
@@ -228,6 +239,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(37-k)
                 img = train_transform(Image.open('kisoko/test/130{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -237,6 +249,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(39-k)
                 img = train_transform(Image.open('kisoko/test/140{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -246,6 +259,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(41-k)
                 img = train_transform(Image.open('kisoko/test/150{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -255,6 +269,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(45-k)
                 img = train_transform(Image.open('kisoko/test/160{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -264,6 +279,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(47-k)
                 img = train_transform(Image.open('kisoko/test/170{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -273,6 +289,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(49-k)
                 img = train_transform(Image.open('kisoko/test/180{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -283,6 +300,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(53-k)
                 img = train_transform(Image.open('kisoko/test/190{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -292,6 +310,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(55-k)
                 img = train_transform(Image.open('kisoko/test/200{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -301,6 +320,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(57-k)
                 img = train_transform(Image.open('kisoko/test/210{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -310,6 +330,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(63-k)
                 img = train_transform(Image.open('kisoko/test/220{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                   
@@ -319,6 +340,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(65-k)
                 img = train_transform(Image.open('kisoko/test/230{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                 
@@ -328,6 +350,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(69-k)
                 img = train_transform(Image.open('kisoko/test/240{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                  
@@ -337,6 +360,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(71-k)
                 img = train_transform(Image.open('kisoko/test/250{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                  
@@ -346,6 +370,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(75-k)
                 img = train_transform(Image.open('kisoko/test/260{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
 
                       
@@ -355,6 +380,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                   if k!=labels[i]:
                     list.append(77-k)
                 img = train_transform(Image.open('kisoko/test/270{}/IMG_{} 小.jpeg'.format(random.choice(list),random.randrange(1,4))))
+                img_batch = img[None]
                 outputs2 = net(img)
                 
               
