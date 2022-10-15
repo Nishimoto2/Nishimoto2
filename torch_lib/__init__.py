@@ -426,6 +426,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs5.append((outputs4[68]+outputs4[69])/2)  
               outputs5.append((outputs4[70]+outputs[71]+outputs[72]+outputs[73])/4)
               outputs5.append((outputs4[74]+outputs4[75])/2) 
+              print(outputs5)
                   
                   
                   
