@@ -472,10 +472,10 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             val_acc += (predicted2 == labels2).sum().item()
 
             # 損失と精度の計算
-            avg_val_loss = val_loss / count
+            #avg_val_loss = val_loss / count
             avg_val_acc = val_acc / count
     
-        print (f'Epoch [{(epoch+1)}/{num_epochs+base_epochs}], loss: {avg_train_loss:.5f} acc: {avg_train_acc:.5f} val_loss: , val_acc: {avg_val_acc:.5f}')
+        print (f'Epoch [{(epoch+1)}/{num_epochs+base_epochs}], loss: {avg_train_loss:.5f} acc: {avg_train_acc:.5f} val_acc: {avg_val_acc:.5f}')
         item = np.array([epoch+1, avg_train_loss, avg_train_acc, avg_val_acc])
         history = np.vstack((history, item))
     return history
