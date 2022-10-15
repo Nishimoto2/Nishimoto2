@@ -88,6 +88,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
         #予測フェーズ
         net.eval()
         count = 0
+        
 
         for inputs, labels in test_loader:
             count += len(labels)
@@ -395,13 +396,36 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs4 = outputs4.to('cpu').detach().numpy()
               print(outputs4)
               print(labels2)
+              outputs5 = []
               
               
-              
-                  
-                  
-                  
-                  
+              outputs5.append((outputs4[0]+outputs4[1])/2)
+              outputs5.append((outputs4[2]+outputs[3]+outputs[4]+outputs[5])/4)
+              outputs5.append((outputs4[6]+outputs4[7])/2)
+              outputs5.append((outputs4[8]+outputs4[9])/2)
+              outputs5.append((outputs4[10]+outputs[11]+outputs[12]+outputs[13]+outputs[14])/5)
+              outputs5.append((outputs4[15]+outputs4[16])/2)
+              outputs5.append((outputs4[17]+outputs[18]+outputs[19]+outputs[20])/4)
+              outputs5.append((outputs4[21]+outputs4[22])/2)
+              outputs5.append((outputs4[23]+outputs4[24])/2)
+              outputs5.append((outputs4[25]+outputs4[26])/2)
+              outputs5.append((outputs4[27]+outputs[28]+outputs[29]+outputs[30]+outputs[31])/5)
+              outputs5.append((outputs4[32]+outputs4[33])/2)
+              outputs5.append((outputs4[34]+outputs4[35])/2)
+              outputs5.append((outputs4[36]+outputs4[37])/2)
+              outputs5.append((outputs4[38]+outputs4[39])/2)
+              outputs5.append((outputs4[40]+outputs[41]+outputs[42]+outputs[43])/4)
+              outputs5.append((outputs4[44]+outputs4[45])/2)
+              outputs5.append((outputs4[46]+outputs4[47])/2)
+              outputs5.append((outputs4[48]+outputs[49]+outputs[50]+outputs[51])/4)
+              outputs5.append((outputs4[52]+outputs4[53])/2)
+              outputs5.append((outputs4[54]+outputs4[55])/2)
+              outputs5.append((outputs4[56]+outputs[57]+outputs[58]+outputs[59]+outputs[60]+outputs[61])/6)
+              outputs5.append((outputs4[62]+outputs4[63])/2)  
+              outputs5.append((outputs4[64]+outputs[65]+outputs[66]+outputs[67])/4)
+              outputs5.append((outputs4[68]+outputs4[69])/2)  
+              outputs5.append((outputs4[70]+outputs[71]+outputs[72]+outputs[73])/4)
+              outputs5.append((outputs4[74]+outputs4[75])/2) 
                   
                   
                   
