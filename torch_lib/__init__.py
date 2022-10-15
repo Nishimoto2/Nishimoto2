@@ -148,7 +148,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 8<=labels[i]<=9:
-                rabels2.append(4)
+                labels2.append(4)
                 for k in range(8,10):
                   if k!=labels[i]:
                     list.append(k-7)
