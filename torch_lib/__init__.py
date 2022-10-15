@@ -439,6 +439,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             labels2 = torch.tensor(labels2).float()
             outputs5 = outputs5.view(2,-1)
             print(outputs5)
+            outputs5 = outputs5.type(torch.LongTensor)
+            labels2 = labels2.type(torch.LongTensor)
             loss = criterion(outputs5, labels2)
             val_loss += loss.item()
             predicted2 = torch.max(outputs5, 1)[1]
