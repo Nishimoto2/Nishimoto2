@@ -106,7 +106,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #予測値算出
             predicted = torch.max(outputs, 1)[1]
             
-            predicted_1=torch.topk(outputs,5,1)[0]
+            #predicted_1=torch.topk(outputs,5,1)[0]
             #predicted_2=torch.topk(outputs, 5, 1)[1]
             labels2 = []
             outputs5 = []
@@ -428,8 +428,6 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs5.append((outputs4[70]+outputs4[71]+outputs4[72]+outputs4[73])/4)
               outputs5.append((outputs4[74]+outputs4[75])/2) 
               print(outputs5)
-              outputs5 = torch.tensor(outputs5).float()
-              labels2 = torch.tensor(labels2).float()
               
               
                   
@@ -438,7 +436,9 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             
 #original
             
-
+            outputs5 = torch.tensor(outputs5).float()
+            labels2 = torch.tensor(labels2).float()
+            outputs5 = outputs5.view(2,-1)
             loss = criterion(outputs5, labels2)
             #正解件数算出
             val_acc += (predicted2 == labels2).sum().item()
