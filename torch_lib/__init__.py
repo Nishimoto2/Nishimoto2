@@ -428,7 +428,9 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs5.append((outputs4[74]+outputs4[75])/2) 
               print(outputs5)
               outputs5 = torch.tensor(outputs5).float()
-              print(outputs5)
+              labels2 = torch.tensor(labels2).float()
+              loss = criterion(outputs5, labels2)
+              
                   
                   
                   
