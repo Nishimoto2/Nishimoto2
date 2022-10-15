@@ -427,6 +427,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs5.append((outputs4[70]+outputs4[71]+outputs4[72]+outputs4[73])/4)
               outputs5.append((outputs4[74]+outputs4[75])/2) 
               print(outputs5)
+              outputs5 = torch.from_numpy(outputs5.astype(np.float32)).clone()
+              print(outputs5)
                   
                   
                   
