@@ -468,8 +468,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             #loss = criterion(outputs5, labels2)
             #val_loss += loss.item()
             predicted2 = torch.max(outputs5, 1)[1]
-            print(predicted2)
-            print(labels2)
+            #print(predicted2)
+            #print(labels2)
             #正解件数算出
             val_acc += (predicted2 == labels2).sum().item()
 
