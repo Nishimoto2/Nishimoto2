@@ -108,9 +108,10 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             
             predicted_1=torch.topk(outputs,5,1)[0]
             #predicted_2=torch.topk(outputs, 5, 1)[1]
-            labels2=[]
-            predicted2=[]
-            #print(labels)
+            labels2 = []
+            outputs5 = []
+            predicted2 = []
+            print(labels)
 
             for i in range(len(labels)):
               list=[]
@@ -396,7 +397,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               outputs4 = outputs4.to('cpu').detach().numpy()
               print(outputs4)
               print(labels2)
-              outputs5 = []
+              
               
               
               outputs5.append((outputs4[0]+outputs4[1])/2)
@@ -429,7 +430,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               print(outputs5)
               outputs5 = torch.tensor(outputs5).float()
               labels2 = torch.tensor(labels2).float()
-              loss = criterion(outputs5, labels2)
+              
               
                   
                   
@@ -438,6 +439,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 #original
             
 
+            loss = criterion(outputs5, labels2)
             #正解件数算出
             val_acc += (predicted2 == labels2).sum().item()
 
