@@ -115,7 +115,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
             for i in range(len(labels)):
               list=[]
               if 0<=labels[i]<=1:
-                labels2.append(1)
+                labels2.append(0)
                 for k in range(0,2):
                   if k!=labels[i]:
                     list.append(k+1)
@@ -126,7 +126,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 2<=labels[i]<=5:
-                labels2.append(2)
+                labels2.append(1)
                 for k in range(2,6):
                   if k!=labels[i]:
                     list.append(k-1)
@@ -137,7 +137,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 6<=labels[i]<=7:
-                labels2.append(3)
+                labels2.append(2)
                 for k in range(6,8):
                   if k!=labels[i]:
                     list.append(k-5)
@@ -148,7 +148,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 8<=labels[i]<=9:
-                labels2.append(4)
+                labels2.append(3)
                 for k in range(8,10):
                   if k!=labels[i]:
                     list.append(k-7)
@@ -159,7 +159,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 10<=labels[i]<=14:
-                labels2.append(5)
+                labels2.append(4)
                 for k in range(10,15):
                   if k!=labels[i]:
                     list.append(k-9)
@@ -170,7 +170,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 15<=labels[i]<=16:
-                labels2.append(6)
+                labels2.append(5)
                 for k in range(15,17):
                   if k!=labels[i]:
                     list.append(k-14)
@@ -182,7 +182,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 
                 
               elif 17<=labels[i]<=20:
-                labels2.append(7)
+                labels2.append(6)
                 for k in range(17,21):
                   if k!=labels[i]:
                     list.append(k-16)
@@ -192,7 +192,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 outputs2 = net(img_batch)
                   
               elif 21<=labels[i]<=22:
-                labels2.append(8)
+                labels2.append(7)
                 for k in range(21,23):
                   if k!=labels[i]:
                     list.append(k-20)
@@ -204,7 +204,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 23<=labels[i]<=24:
-                labels2.append(9)
+                labels2.append(8)
                 for k in range(23,25):
                   if k!=labels[i]:
                     list.append(k-22)
@@ -215,7 +215,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 25<=labels[i]<=26:
-                labels2.append(10)
+                labels2.append(9)
                 for k in range(25,27):
                   if k!=labels[i]:
                     list.append(k-24)
@@ -226,7 +226,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 27<=labels[i]<=31:
-                labels2.append(11)
+                labels2.append(10)
                 for k in range(27,32):
                   if k!=labels[i]:
                     list.append(k-26)
@@ -237,7 +237,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 32<=labels[i]<=33:
-                labels2.append(12)
+                labels2.append(11)
                 for k in range(32,34):
                   if k!=labels[i]:
                     list.append(k-31)
@@ -249,7 +249,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                     
                     
               elif 34<=labels[i]<=35:
-                labels2.append(13)
+                labels2.append(12)
                 for k in range(34,36):
                   if k!=labels[i]:
                     list.append(k-33)
@@ -260,7 +260,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 36<=labels[i]<=37:
-                labels2.append(14)
+                labels2.append(13)
                 for k in range(36,38):
                   if k!=labels[i]:
                     list.append(k-35)
@@ -271,7 +271,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 38<=labels[i]<=39:
-                labels2.append(15)
+                labels2.append(14)
                 for k in range(38,40):
                   if k!=labels[i]:
                     list.append(k-37)
@@ -282,7 +282,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 40<=labels[i]<=43:
-                labels2.append(16)
+                labels2.append(15)
                 for k in range(40,44):
                   if k!=labels[i]:
                     list.append(k-39)
@@ -293,7 +293,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 44<=labels[i]<=45:
-                labels2.append(17)
+                labels2.append(16)
                 for k in range(44,46):
                   if k!=labels[i]:
                     list.append(k-43)
@@ -304,7 +304,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 46<=labels[i]<=47:
-                labels2.append(18)
+                labels2.append(17)
                 for k in range(46,48):
                   if k!=labels[i]:
                     list.append(k-45)
@@ -316,7 +316,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
                 
                 
               elif 48<=labels[i]<=51:
-                labels2.append(19)
+                labels2.append(18)
                 for k in range(48,52):
                   if k!=labels[i]:
                     list.append(k-47)
@@ -327,7 +327,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 52<=labels[i]<=53:
-                labels2.append(20)
+                labels2.append(19)
                 for k in range(52,54):
                   if k!=labels[i]:
                     list.append(k-51)
@@ -338,7 +338,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 54<=labels[i]<=55:
-                labels2.append(21)
+                labels2.append(20)
                 for k in range(54,56):
                   if k!=labels[i]:
                     list.append(k-53)
@@ -349,7 +349,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 56<=labels[i]<=61:
-                labels2.append(22)
+                labels2.append(21)
                 for k in range(56,62):
                   if k!=labels[i]:
                     list.append(k-55)
@@ -360,7 +360,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                   
               elif 62<=labels[i]<=63:
-                labels2.append(23)
+                labels2.append(22)
                 for k in range(62,64):
                   if k!=labels[i]:
                     list.append(k-61)
@@ -371,7 +371,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                 
               elif 64<=labels[i]<=67:
-                labels2.append(24)
+                labels2.append(23)
                 for k in range(64,68):
                   if k!=labels[i]:
                     list.append(k-63)
@@ -382,7 +382,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                  
               elif 68<=labels[i]<=69:
-                labels2.append(25)
+                labels2.append(24)
                 for k in range(68,70):
                   if k!=labels[i]:
                     list.append(k-67)
@@ -393,7 +393,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                  
               elif 70<=labels[i]<=73:
-                labels2.append(26)
+                labels2.append(25)
                 for k in range(70,74):
                   if k!=labels[i]:
                     list.append(k-69)
@@ -404,7 +404,7 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
 
                       
               elif 74<=labels[i]<=75:
-                labels2.append(27)
+                labels2.append(26)
                 for k in range(74,76):
                   if k!=labels[i]:
                     list.append(k-73)
