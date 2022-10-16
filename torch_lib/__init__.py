@@ -48,7 +48,6 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
         #訓練フェーズ
         net.train()
         count = 0
-        m = nn.Softmax(dim=1)
 
         for inputs, labels in tqdm(train_loader):
             count += len(labels)
@@ -416,10 +415,10 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               
               #print(outputs2)
               #print('///')
-              #print(outputs[i,:])
+              print(outputs[i,:])
               outputs3 = outputs2[0,:]
-              outputs6 = m(outputs[i,:])
-              outputs4 = outputs6 + m(outputs3)
+              print(outputs3)
+              outputs4 = outputs[i,:] + outputs3
               #print(outputs4)
               outputs4 = outputs4.to('cpu').detach().numpy()
               #print(outputs4)
