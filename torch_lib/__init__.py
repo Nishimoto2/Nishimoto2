@@ -417,8 +417,8 @@ def fit(net, optimizer, criterion, num_epochs, train_loader, test_loader, device
               #print(outputs2)
               #print('///')
               #print(outputs[i,:])
-              outputs3 = m(outputs2[0,:])
-              outputs4 = m(outputs[i,:]) + outputs3
+              outputs3 = outputs2[0,:]
+              outputs4 = m(outputs[i,:]) + m(outputs3)
               #print(outputs4)
               outputs4 = outputs4.to('cpu').detach().numpy()
               #print(outputs4)
